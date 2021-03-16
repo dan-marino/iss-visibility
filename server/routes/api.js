@@ -1,20 +1,8 @@
 import express from "express";
 import { getIssPosition } from "../apis/iss.js";
 import { getWeatherByCoordinates } from "../apis/weather.js";
+import issVisibilityData from "../helpers/issVisibilityData.js";
 export const router = express.Router();
-
-const issVisibilityData = (data) => {
-  const {
-    name,
-    dt,
-    sys: { country, sunset, sunrise },
-    weather: arr,
-    coord: { lon, lat },
-  } = data
-  const main = arr[0].main;
-
-  return { name, dt, country, sunset, sunrise, main, lon, lat };
-}
 
 router.get("/iss-visibility", async (req, res, next) => {
   const issData = await getIssPosition();
