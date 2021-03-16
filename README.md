@@ -13,12 +13,16 @@ The ISS visibility can be determined based on if it's currently past sunset at t
 ## Getting Started
 
 1. Clone this repo and cd into it.
-2. cd into the server folder
+```
+git clone https://github.com/dan-marino/iss-visibility
+cd iss-visibility
+```
+2. cd into the server folder `cd server`
    1. run `npm install`
    2. run `node server.js`
 3. Open a new tab in your terminal
-4. cd back to the root directory
-5. cd into the client folder
+4. cd back to the root directory `cd ../`
+5. cd into the client folder `cd client`
    1. run `npm install`
    2. run `npm start`
 
